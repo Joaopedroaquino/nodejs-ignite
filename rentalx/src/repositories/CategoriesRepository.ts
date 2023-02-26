@@ -4,7 +4,7 @@ interface ICreateCategoryDTO {
     name: string;
     description: string;
 
-}
+};
 
 export class CategoriesRepository {
     private categories: Category[];
@@ -12,7 +12,7 @@ export class CategoriesRepository {
     constructor() {
         this.categories = [];
 
-    }
+    };
 
     create({ name, description }: ICreateCategoryDTO): void {
         const category = new Category();
@@ -24,5 +24,10 @@ export class CategoriesRepository {
         });
 
         this.categories.push(category);
-    }
+    };
+
+    list():Category[] {
+        return this.categories;
+
+    };
 }
