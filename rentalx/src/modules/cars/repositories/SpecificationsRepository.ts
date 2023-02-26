@@ -13,6 +13,7 @@ export class SpecificationsRepository implements ISpecificationsRepository {
             created_at: new Date(),
         });
         this.specifications.push(specification);
+        console.log(specification)
     };
 
     findByName(name: string): Specification {
