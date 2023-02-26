@@ -8,6 +8,6 @@ export interface ICreateCategoryDTO {
 
 export interface ICategoriesRespository {
     findByName(name: string): Category;
-    create({name, description}:ICreateCategoryDTO): void;
-    list(): Category[]
+    create({ name, description }: ICreateCategoryDTO): void;
+    list(): Category[];
 }
