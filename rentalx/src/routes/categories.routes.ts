@@ -2,8 +2,8 @@ import { request, response, Router } from 'express';
 import { v4 as uuidV4 } from 'uuid';
 import { Category } from '../modules/cars/model/Category';
 import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository';
-import { CreateCatgoryService } from '../services/CreateCategoryService';
-import { ListCategoryService } from '../services/ListCategoryService';
+import { CreateCatgoryService } from '../modules/cars/services/CreateCategoryService';
+import { ListCategoryService } from '../modules/cars/services/ListCategoryService';
 
 export const categoriesRoutes = Router();
 const categoriesRepository = new CategoriesRepository();
