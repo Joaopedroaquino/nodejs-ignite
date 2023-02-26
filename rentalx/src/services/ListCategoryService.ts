@@ -1,5 +1,5 @@
-import { CategoriesRepository } from "../repositories/CategoriesRepository";
-import { ICategoriesRespository } from "../repositories/ICategoriesRepository";
+import { CategoriesRepository } from "../modules/cars/repositories/CategoriesRepository";
+import { ICategoriesRespository } from "../modules/cars/repositories/ICategoriesRepository";
 
 export class ListCategoryService {
     constructor(private categoriesRepository: ICategoriesRespository) { };
