@@ -17,7 +17,5 @@ categoriesRoutes.post("/", (request, response) => {
 
 categoriesRoutes.get("/", (request, response) => {
     const categoryService = new ListCategoryService(categoriesRepository)
-
-  
     return response.json(categoryService);
 });
