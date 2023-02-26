@@ -4,7 +4,7 @@ import { Category } from '../model/Category';
 import { CategoriesRepository } from '../repositories/CategoriesRepository';
 import { CreateCatgoryService } from '../services/CreateCategoryService';
 
-const categoriesRoutes = Router();
+export const categoriesRoutes = Router();
 const categoriesRepository = new CategoriesRepository();
 
 categoriesRoutes.post("/", (request, response) => {
@@ -18,6 +18,3 @@ categoriesRoutes.get("/", (request, response) => {
     const all = categoriesRepository.list();
     return response.json(all);
 });
-
-
-export { categoriesRoutes };

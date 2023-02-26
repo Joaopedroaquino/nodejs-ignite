@@ -3,7 +3,7 @@ import { CategoriesRepository } from "../repositories/CategoriesRepository";
 interface IRequest {
     name: string;
     description: string;
-}
+};
 export class CreateCatgoryService {
     constructor(private categoriesRepository: CategoriesRepository) { }
     execute({ name, description }: IRequest): void {
@@ -13,5 +13,4 @@ export class CreateCatgoryService {
         };
         this.categoriesRepository.create({ name, description });
     };
-
 };
