@@ -4,7 +4,9 @@ import { Category } from '../modules/cars/model/Category';
 import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository';
 import { createCategoryController } from '../modules/cars/useCases/createCategory';
 import { CreateCategoryUseCase } from '../modules/cars/useCases/createCategory/CreateCategoryUseCase';
-import { ListCategoryUseCase } from '../modules/cars/useCases/createCategory/ListCategoryUseCase';
+import { listCategoryController } from '../modules/cars/useCases/listCategories';
+import { ListCategoriesController } from '../modules/cars/useCases/listCategories/ListCategoriesController';
+import { ListCategoryUseCase } from '../modules/cars/useCases/listCategories/ListCategoryUseCase';
 
 export const categoriesRoutes = Router();
 const categoriesRepository = new CategoriesRepository();
@@ -15,6 +17,6 @@ categoriesRoutes.post("/", (request, response) => {
 });
 
 categoriesRoutes.get("/", (request, response) => {
-    const categoryService = new ListCategoryUseCase(categoriesRepository)
-    return response.json(categoryService);
+    return listCategoryController.handle(request,response)
+   
 });
