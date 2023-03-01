@@ -9,7 +9,6 @@ import { ListCategoriesController } from '../modules/cars/useCases/listCategorie
 import { ListCategoryUseCase } from '../modules/cars/useCases/listCategories/ListCategoryUseCase';
 
 export const categoriesRoutes = Router();
-const categoriesRepository = new CategoriesRepository();
 
 categoriesRoutes.post("/", (request, response) => {
     return createCategoryController.handle(request, response);

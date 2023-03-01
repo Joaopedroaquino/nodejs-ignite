@@ -3,6 +3,6 @@ import { CreateCategoryController } from "../createCategory/CreateCategoryContro
 import { ListCategoriesController } from "./ListCategoriesController";
 import { ListCategoryUseCase } from "./ListCategoryUseCase";
 
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository =  CategoriesRepository.getInstance();
 const listCategoriesUsecase = new ListCategoryUseCase(categoriesRepository);
 export const listCategoryController = new ListCategoriesController(listCategoriesUsecase);
