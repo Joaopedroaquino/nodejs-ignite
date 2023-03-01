@@ -5,7 +5,7 @@ export interface IRequest {
     description: string;
 }
 
-export class CreateSpecificationService {
+export class CreateSpecificationUseCase {
     constructor(private specificationRepository: SpecificationsRepository) { };
     execute({ name, description }: IRequest): void {
         const specificationAlreadyExists = this.specificationRepository.findByName(name);
