@@ -13,11 +13,11 @@ export class CategoriesRepository implements ICategoriesRespository {
 
     public static getInstance(): CategoriesRepository {
         if (!CategoriesRepository.INSTANCE) {
-            CategoriesRepository.INSTANCE = new CategoriesRepository()
-        }
+            CategoriesRepository.INSTANCE = new CategoriesRepository();
+        };
 
-        return CategoriesRepository.INSTANCE
-    }
+        return CategoriesRepository.INSTANCE;
+    };
 
     create({ name, description }: ICreateCategoryDTO): void {
         const category = new Category();
