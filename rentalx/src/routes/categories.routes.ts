@@ -1,7 +1,7 @@
 import { request, response, Router } from 'express';
 import { v4 as uuidV4 } from 'uuid';
 import { Category } from '../modules/cars/model/Category';
-import { CategoriesRepository } from '../modules/cars/repositories/CategoriesRepository';
+import { CategoriesRepository } from '../modules/cars/repositories/implementations/CategoriesRepository';
 import { createCategoryController } from '../modules/cars/useCases/createCategory';
 import { CreateCategoryUseCase } from '../modules/cars/useCases/createCategory/CreateCategoryUseCase';
 import { listCategoryController } from '../modules/cars/useCases/listCategories';
