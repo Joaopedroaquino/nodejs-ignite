@@ -4,8 +4,8 @@ import { ListCategoryUseCase } from "./ListCategoryUseCase";
 
 export class ListCategoriesController {
     constructor(private listCategoriesUsecase: ListCategoryUseCase){};
-    handle(request:Request, response: Response): Category[]{
+    handle(request:Request, response: Response){
         const categories = this.listCategoriesUsecase.execute();
-        return categories;
+        return response.json(categories);
     }
 }
