@@ -5,9 +5,6 @@ import { CreateSpecificationUseCase } from "../modules/cars/useCases/createSpeci
 
 export const specificationRoutes = Router();
 
-specificationRoutes.post("/", (request, response)=>{
-
+specificationRoutes.post("/", (request, response) => {
     return createSpecificationController.handle(request, response)
-  
-
 });
